@@ -1,0 +1,30 @@
+version: '3.8'
+services:
+  app:
+    image: golang
+    volumes:
+      - ./app:/go/go-http
+    ports:
+      - 8080:8080
+    working_dir: /go/go-http/server
+    command: bash -c "go mod tidy && go run ."
+    stdin_open: true
+    tty: true
+
+  ollama:
+    image: ollama/ollama:latest
+#    expose:
+#      - 11434
+    volumes:
+      - ollama:/root/.ollama
+#    deploy:
+#      resources:
+#        reservations:
+#          devices:
+#            - driver: nvidia
+#              count: all
+#              capabilities: [gpu]
+    restart: unless-stopped
+
+volumes:
+  ollama:
