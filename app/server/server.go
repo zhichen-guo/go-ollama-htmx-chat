@@ -45,6 +45,6 @@ func main() {
 	http.HandleFunc("GET /", homePage)
 	http.HandleFunc("POST /chat", chat)
 	http.HandleFunc("GET /generate", generate)
-	http.Handle("GET /img/", http.StripPrefix("/img/", http.FileServer(http.Dir("./img"))))
+	http.Handle("GET /assets/", http.StripPrefix("/assets/", http.FileServer(http.Dir("./assets"))))
 	log.Fatal(http.ListenAndServe(":8080", nil))
 }

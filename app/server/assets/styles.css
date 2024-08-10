@@ -1,0 +1,61 @@
+body {
+    display: flex;
+    justify-content: center;
+    font-family: "Gill Sans", sans-serif;
+}
+
+.container {
+    width: min(100%, 750px);
+}
+
+h1 {
+    text-align: center;
+}
+
+#chat {
+    height: 70vh;
+    overflow-y: scroll;
+}
+
+p {
+    font-size: 16px;
+}
+
+.message-container-user {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.message {
+    padding: 5px 15px;
+}
+
+.message-user {
+    background: lightseagreen;
+    border-radius: 15px 15px 5px 15px;
+}
+
+.message-container-bot {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.message-bot {
+    background: lightgray;
+    border-radius: 15px 15px 15px 5px;
+}
+
+.htmx-indicator {
+    width: 30px; 
+    height: 30px
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+input {
+    width: 100%;
+}
