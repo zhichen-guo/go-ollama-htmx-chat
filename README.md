@@ -12,3 +12,7 @@ This is the first app I've ever built using Golang. It is a simple interface to 
 2. Spin up containers: ```docker compose up```
 3. In a new terminal window, install the necessary model in the ollama container: ```docker compose exec ollama ollama pull qwen2```
 4. Server will be accessible in ```localhost:8080```
+
+## Other commands
+* To access the golang container, use ```docker compose exec server bash```
+* 
